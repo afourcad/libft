@@ -3,8 +3,8 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
-	const int	*tmp_src;
-	int		*tmp_dest;
+	const char	*tmp_src;
+	char		*tmp_dest;
 
 	i = 0;
 	tmp_src = src;
