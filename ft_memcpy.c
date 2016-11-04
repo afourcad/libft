@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/11/04 16:51:01 by afourcad          #+#    #+#             */
+/*   Updated: 2016/11/04 17:01:35 by afourcad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
-	const char	*tmp_src;
-	char		*tmp_dest;
+	const char		*tmp_src;
+	char			*tmp_dest;
 
 	i = 0;
 	tmp_src = src;

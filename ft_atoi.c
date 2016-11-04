@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/11/04 16:43:51 by afourcad          #+#    #+#             */
+/*   Updated: 2016/11/04 19:15:16 by afourcad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_atoi(const char *nptr)
@@ -17,11 +29,9 @@ int	ft_atoi(const char *nptr)
 			is_neg = -1;
 		i++;
 	}
-	while (nptr[i] >= '0' && nptr [i] <= '9')
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		if (nptr[i] < '0' || nptr[i] > '9')
-			return (nbr * is_neg);
-		nbr = nbr * 10 + nptr[i] - 48; 
+		nbr = nbr * 10 + nptr[i] - 48;
 		i++;
 	}
 	return (nbr * is_neg);
