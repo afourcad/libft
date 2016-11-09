@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 17:19:39 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/04 18:39:23 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/04 20:05:04 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,25 @@
 
 #define TEST_ATOI(value) 	ft = ft_atoi(value);\
 						base = atoi(value);\
-						printf("ft_atoi(value) = %d\n", ft);\
-						printf("atoi(value) = %d\n\n", base);\
-						is_good = (strcmp(ft, base) != 0) ? is_good : is_good++;
+						printf("ft_atoi("value") = %d\n", ft);\
+						printf("atoi("value") = %d\n\n", base);\
+						is_good = (ft != base) ? is_good : is_good++;
 
+void	test_atoi(int *res)
+{
+	int	ft;
+	int	base;
+	int	is_good;
+
+	is_good = 0;
+	printf("-----FT_ATOI-----\n\n");
+	TEST_ATOI("42");
+	TEST_ATOI("-42");
+	TEST_ATOI("--42");
+	TEST_ATOI("+42");
+	*res = (is_good == 4) ? *res++ : *res;
+	printf("-----------------\n\n");
+}
 
 int	ft_test(void)
 {
@@ -54,21 +69,6 @@ int	ft_test(void)
 	test_ft_strstr(&res, );
 	test_libft(&res, ); */
 	return (res);
-}
-
-void	test_atoi(int *res)
-{
-	int	ft;
-	int	base;
-	int	is_good;
-
-	is_good = 0;
-	printf("-----FT_ATOI-----\n\n")
-	TEST_ATOI("42");
-	TEST_ATOI("-42");
-	TEST_ATOI("--42");
-	TEST_ATOI("+42");
-	*res = (is_good == 4) ? *res++ : *res;
 }
 
 int	main()

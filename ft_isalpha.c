@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 16:49:16 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/04 16:49:18 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/08 17:45:47 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_isalpha(int c)
 {
-	if (((const char)c >= 'a' && (const char)c <= 'z')
-			|| ((const char)c >= 'A' && (const char)c <= 'Z'))
+	if ((c >= 'a' && c <= 'z')
+			|| (c >= 'A' && c <= 'Z'))
 		return (1);
 	else
 		return (0);

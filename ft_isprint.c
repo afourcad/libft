@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 16:49:54 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/04 16:49:56 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/08 17:50:38 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	if ((const char)c > 31 && (const char)c < 127)
+	if (c > 31 && c < 127)
 		return (1);
 	return (0);
 }

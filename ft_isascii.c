@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 16:49:28 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/04 16:49:31 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/08 17:50:16 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isascii(int c)
 {
-	if ((const char)c >= 0 && (const char)c <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);

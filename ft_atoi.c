@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 16:43:51 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/04 19:15:16 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/09 20:08:35 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	nbr = 0;
 	is_neg = 1;
-	while (nptr[i] == ' ' || nptr[i] == '\n' || nptr[i] == '\t')
+	while (nptr[i] == ' ' || nptr[i] == '\n' || nptr[i] == '\t'
+			|| nptr[i] == '\r' || nptr[i] == '\f' || nptr[i] == '\v')
 		i++;
 	if (nptr[i] == '+' || nptr[i] == '-')
 	{

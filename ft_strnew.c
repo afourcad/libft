@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 16:53:45 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/09 20:03:02 by afourcad         ###   ########.fr       */
+/*   Created: 2016/11/07 19:11:30 by afourcad          #+#    #+#             */
+/*   Updated: 2016/11/07 19:18:03 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+char *ft_strnew(size_t size)
 {
-	unsigned int	i;
+	char	*str;
 
-	i = 0;
-	if (!*s1 || !*s2)
-		return (((unsigned char)*s1 - (unsigned char)*s2));
-	while (s1[i] && s2[i])
-	{
-		if (s1[i] != s2[i])
-			return (((unsigned char)s1[i] - (unsigned char)s2[i]));
-		i++;
-	}
-	return (0);
+	if ((str = (char *)malloc(sizeof(*str) * size)) == NULL)
+		return (NULL);
+	ft_bzero(str, size);
+	return (str);
 }

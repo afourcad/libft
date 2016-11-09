@@ -6,13 +6,13 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 16:53:55 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/04 16:57:37 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/07 21:12:27 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strcpy(char *dest, const char *src)
+char	*ft_strcpy(char *dest, const char *src)
 {
 	size_t	i;
 
