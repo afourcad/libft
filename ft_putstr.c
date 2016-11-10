@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 16:53:08 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/04 16:58:44 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/10 17:58:33 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putstr(char *str)
 {
-	write(1, str, ft_strlen(str));
+	if (str)
+		write(1, str, ft_strlen(str));
 }

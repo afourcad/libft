@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 19:18:35 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/07 19:22:17 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/10 17:55:42 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	ft_strdel(char **as)
 {
-	if (*as)
-	{
-		free(*as);
-		*as = NULL;
-	}
+	if(as)
+		if (*as)
+		{
+			free(*as);
+			*as = NULL;
+		}
 }

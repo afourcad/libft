@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 19:07:42 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/10 17:37:17 by afourcad         ###   ########.fr       */
+/*   Created: 2016/11/10 18:47:57 by afourcad          #+#    #+#             */
+/*   Updated: 2016/11/10 18:55:18 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	if (ap)
-		if (*ap)
+	char 			*str_fresh;
+	unsigned int	i;
+
+	if (s && f)
+	{
+		if ((str_fresh = ft_strnew(ft_strlen(s))) == NULL)
+			return (NULL);
+		i = 0;
+		while (s[i])
 		{
-			free(*ap);
-			*ap = NULL;
+			str_fresh[i] = f(i, s[i]);
+			i++;
 		}
+		return (str_fresh);
+	}
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 19:11:30 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/07 19:18:03 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/10 17:54:54 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char *ft_strnew(size_t size)
 {
 	char	*str;
 
-	if ((str = (char *)malloc(sizeof(*str) * size)) == NULL)
+	if ((str = (char *)malloc(sizeof(*str) * (size) + 1)) == NULL)
 		return (NULL);
-	ft_bzero(str, size);
+	ft_bzero(str, size + 1);
 	return (str);
 }
