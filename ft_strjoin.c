@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 16:53:08 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/11 18:38:09 by afourcad         ###   ########.fr       */
+/*   Created: 2016/11/11 11:45:11 by afourcad          #+#    #+#             */
+/*   Updated: 2016/11/11 12:17:42 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *str)
+char *ft_strjoin(const char *s1, const char *s2)
 {
-	if (str)
-		write(1, str, ft_strlen(str));
+	char 			*str_join;
+	unsigned int	i;
+	unsigned int	j;
+
+	if (!s1 || !s2)
+		return (NULL);
+	i = ft_strlen(s1);
+	j = 0;
+	if ((str_join = ft_strndup(s1, i + ft_strlen(s2) + 1)) == NULL)
+		return (NULL);
+	while (s2[j])
+	{
+		str_join[i] = s2[j];
+		i++;
+		j++;
+	}
+	str_join[i] = '\0';
+	return (str_join);
 }

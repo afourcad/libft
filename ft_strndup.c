@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 16:53:08 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/11 18:38:09 by afourcad         ###   ########.fr       */
+/*   Created: 2016/11/11 11:35:41 by afourcad          #+#    #+#             */
+/*   Updated: 2016/11/11 20:07:41 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *str)
+char	*ft_strndup(const char *s, size_t n)
 {
-	if (str)
-		write(1, str, ft_strlen(str));
+	char	*s_cpy;
+	size_t	i;
+
+	i = 0;
+	if((s_cpy = (char *)malloc(sizeof(char) * (n + 1))) == NULL)
+			return (NULL);
+	while (i < n)
+	{
+		s_cpy[i] = s[i];
+		i++;
+	}
+	s_cpy[i] = '\0';
+	return (s_cpy);
 }

@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 16:53:08 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/11 18:38:09 by afourcad         ###   ########.fr       */
+/*   Created: 2016/11/11 18:33:57 by afourcad          #+#    #+#             */
+/*   Updated: 2016/11/11 18:40:01 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *str)
+void	ft_putendl(char const *s)
 {
-	if (str)
-		write(1, str, ft_strlen(str));
+	if (!s)
+		return ;
+	ft_putstr(s);
+	ft_putchar('\n');
 }

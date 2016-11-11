@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 16:53:08 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/11 18:38:09 by afourcad         ###   ########.fr       */
+/*   Created: 2016/11/11 11:18:18 by afourcad          #+#    #+#             */
+/*   Updated: 2016/11/11 11:44:11 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *str)
+char *ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	if (str)
-		write(1, str, ft_strlen(str));
+	char 	*sub_s;
+
+	if (!s)
+		return (NULL);
+	sub_s = ft_strndup(s + start, len);
+	return (sub_s);
 }
