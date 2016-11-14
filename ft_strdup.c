@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 16:54:03 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/09 17:24:45 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/14 16:16:34 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strdup(const char *s)
 	unsigned int	i;
 
 	i = 0;
-	if((s_cpy = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))) == NULL)
-			return (0);
+	if ((s_cpy = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))) == NULL)
+		return (0);
 	while (s[i])
 	{
 		s_cpy[i] = s[i];

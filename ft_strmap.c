@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 19:56:05 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/10 18:46:49 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/14 16:18:38 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char 			*str_fresh;
+	char			*str_fresh;
 	unsigned int	i;
 
 	if (s && f)

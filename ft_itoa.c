@@ -6,13 +6,13 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 16:30:27 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/11 18:33:31 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/14 16:11:44 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int ft_size_itoa(int n, unsigned int size)
+static unsigned int	ft_size_itoa(int n, unsigned int size)
 {
 	if (n == 0)
 		return (size);
@@ -20,7 +20,7 @@ static unsigned int ft_size_itoa(int n, unsigned int size)
 	return (size);
 }
 
-void	ft_get_itoa(long n, int size, char **nbr)
+static void			ft_get_itoa(long n, int size, char **nbr)
 {
 	int				is_neg;
 
@@ -37,10 +37,9 @@ void	ft_get_itoa(long n, int size, char **nbr)
 		size--;
 	}
 	(*nbr)[size] = n + '0';
-
 }
 
-char	*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
 	int				size;
 	char			*nbr;

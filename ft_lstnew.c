@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 16:47:47 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/14 16:18:11 by afourcad         ###   ########.fr       */
+/*   Created: 2016/11/14 16:36:42 by afourcad          #+#    #+#             */
+/*   Updated: 2016/11/14 17:03:53 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	size_t	dst_lgt;
-	size_t	j;
-	size_t	src_lgt;
+	t_list	*lstnew;
 
-	dst_lgt = 0;
-	j = 0;
-	src_lgt = ft_strlen(src);
-	while (dst_lgt < size && dst[dst_lgt])
-		dst_lgt++;
-	j = dst_lgt;
-	while (j < size - 1 && *src)
+	if ((lstnew = (t_list *)malloc(sizeof(*lstnew))) == NULL)
+		return (NULL);
+	if (!content)
 	{
-		dst[j] = *src;
-		j++;
-		src++;
+		lstnew->content = NULL;
+		lstnew->content_size = 0;
 	}
-	if (j > dst_lgt)
-		dst[j] = '\0';
-	return (dst_lgt + src_lgt);
+	else
+	{
+		if ((lstnew->content = malloc(content_size)) == NULL)
+			return (NULL);
+		ft_memcpy(lstnew->content, content, content_size);
+		lstnew->content_size = content_size;
+	}
+	return (lstnew);
 }

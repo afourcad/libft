@@ -6,15 +6,15 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 11:45:11 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/11 12:17:42 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/14 16:17:19 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	char 			*str_join;
+	char			*str_join;
 	unsigned int	i;
 	unsigned int	j;
 

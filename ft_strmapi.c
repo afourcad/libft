@@ -6,15 +6,15 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 18:47:57 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/10 18:55:18 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/14 16:30:13 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char 			*str_fresh;
+	char			*str_fresh;
 	unsigned int	i;
 
 	if (s && f)
