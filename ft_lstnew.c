@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 16:36:42 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/14 17:03:53 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/15 20:40:02 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		ft_memcpy(lstnew->content, content, content_size);
 		lstnew->content_size = content_size;
 	}
+	lstnew->next = NULL;
 	return (lstnew);
 }

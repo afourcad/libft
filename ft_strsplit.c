@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 13:18:14 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/14 16:27:19 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/15 18:10:59 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,12 @@ char				**ft_strsplit(char const *s, char c)
 	char			**split;
 	unsigned int	i;
 
-	if (!s || !c)
+	if (!s || !c || c == '\0')
 		return (NULL);
 	i = 0;
 	while (*s == c && *s)
 		s++;
-	if ((split = (char **)malloc(sizeof(char *) * ft_nbr_words(s, c))) == NULL)
+	if ((split = malloc(sizeof(char *) * (ft_nbr_words(s, c) + 1))) == NULL)
 		return (NULL);
 	while (*s)
 	{

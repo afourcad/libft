@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 16:55:49 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/14 19:49:37 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/15 18:27:59 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t n);
-int					ft_strlen(const char *str);
+size_t				ft_strlen(const char *str);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				*ft_strdup(const char *s);
@@ -64,7 +64,7 @@ void				ft_strclr(char *s);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strmap(char const *s, char (*f)(char));
-char				*strmapi(char const *s, char (*f)(unsigned int, char));
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2i, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);

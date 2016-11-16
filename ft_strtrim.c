@@ -6,36 +6,42 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 12:18:17 by afourcad          #+#    #+#             */
-/*   Updated: 2016/11/14 16:25:50 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/11/15 20:42:42 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(const char *s)
+static int		ft_bool(const char s)
 {
-	unsigned int	s_len;
-	unsigned int	s_start;
-	unsigned int	s_end;
-	char			*strtrim;
+	if (s == ' ' || s == '\t' || s == '\n')
+		return (1);
+	else
+		return (0);
+}
+
+static int		ft_len(const char *s)
+{
+	int	len;
+
+	len = ft_strlen(s) - 1;
+	if (len <= 0)
+		len = 0;
+	while (ft_bool(s[len]) == 1)
+		len--;
+	return (len + 1);
+}
+
+char			*ft_strtrim(const char *s)
+{
+	int		len;
+	char	*str;
 
 	if (!s)
 		return (NULL);
-	s_len = ft_strlen(s);
-	s_start = 0;
-	s_end = 0;
-	if (s_len == 0)
-		return ("\0");
-	while ((s[s_start] == ' ' || s[s_start] == '\n' || s[s_start] == '\t')
-			&& s[s_start])
-		s_start++;
-	s_end = s_len - 1;
-	while ((s[s_end] == ' ' || s[s_end] == '\n' || s[s_end] == '\t')
-			&& s_end)
-		s_end--;
-	if (s_end == 0)
-		return ("\0");
-	s_end = s_len - s_end;
-	strtrim = ft_strndup(s + s_start, s_len - s_start - s_end + 1);
-	return (strtrim);
+	while (ft_bool(*s) == 1)
+		s++;
+	len = ft_len(s);
+	str = ft_strndup(s, len);
+	return (str);
 }
