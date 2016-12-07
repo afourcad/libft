@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_bzerocustom.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 16:51:01 by afourcad          #+#    #+#             */
-/*   Updated: 2016/12/07 17:00:52 by afourcad         ###   ########.fr       */
+/*   Created: 2016/11/24 18:52:09 by afourcad          #+#    #+#             */
+/*   Updated: 2016/11/24 18:58:14 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_bzerocutom(void *s, size_t n, char c)
 {
+	char			*str;
 	unsigned int	i;
-	const char		*tmp_src;
-	char			*tmp_dest;
 
 	i = 0;
-	tmp_src = src;
-	tmp_dest = dest;
-	while (i < n)
+	str = s;
+	while (i < n - 1)
 	{
-		tmp_dest[i] = tmp_src[i];
+		str[i] = c;
 		i++;
 	}
-	return (dest);
+	str[i] = '\0';
 }

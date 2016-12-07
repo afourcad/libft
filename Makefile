@@ -6,7 +6,7 @@
 #    By: afourcad <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 20:03:40 by afourcad          #+#    #+#              #
-#    Updated: 2016/11/14 18:54:34 by afourcad         ###   ########.fr        #
+#    Updated: 2016/12/01 16:58:33 by afourcad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 	  ft_strsub.c ft_strndup.c ft_strjoin.c ft_strtrim.c ft_strsplit.c\
 	  ft_itoa.c ft_putendl.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c\
 	  ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c ft_lstdelone.c\
-	  ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c
+	  ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_strtab.c\
+	  ft_bzerocustom.c ft_setcustomtab.c 
 
 OBJ = $(SRC:.c=.o)
 
