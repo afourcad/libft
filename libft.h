@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 16:55:49 by afourcad          #+#    #+#             */
-/*   Updated: 2016/12/13 21:03:26 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/12/14 16:49:37 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
+void				*ft_memadd(void *dest, const void *src, int beg, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 
 char				*ft_strdup(const char *s);
