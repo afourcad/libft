@@ -6,7 +6,7 @@
 /*   By: afourcad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 16:55:49 by afourcad          #+#    #+#             */
-/*   Updated: 2016/12/14 16:49:37 by afourcad         ###   ########.fr       */
+/*   Updated: 2016/12/14 17:01:37 by afourcad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+void				*ft_memalloc(size_t size);
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_memdel(void **ap);
 void				ft_bzero(void *s, size_t n);
